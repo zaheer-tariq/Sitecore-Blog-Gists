@@ -1,17 +1,26 @@
 ﻿<%@ Page Language="C#" %>
 
 <% /*-------------------------------------------------------------------------
-
     This exmaple is created to run within a Sitecore application.
     Tested with Sitecore 10.3
-    
+
     To run this example, you must add references to the following
-    http://www.squarepdf.net/parsing-pdf-files-using-itextsharp
+    http://www.squarepdf.net/how-to-convert-pdf-to-text-in-net
     
-     - Sitecore.Kernel.dll
-     - itextsharp.dll
+     - IKVM.OpenJDK.Core.dll
+     - IKVM.OpenJDK.SwingAWT.dll
+     - pdfbox-1.8.9.dll
+
+    In addition to these libraries, it is necessary to copy the following files to the application directory:
+
+     - commons-logging.dll
+     - fontbox-1.8.9.dll
+     - IKVM.OpenJDK.Text.dll
+     - IKVM.OpenJDK.Util.dll
+     - IKVM.Runtime.dll
 
 ------------------------------------------------------------------------- */ %>
+
 
 <%@ Import Namespace="System" %>
 <%@ Import Namespace="System.Collections" %>
@@ -25,8 +34,8 @@
 <%@ Import Namespace="Sitecore.Data" %>
 <%@ Import Namespace="System.IO" %>
 <%@ Import Namespace="System.Text" %>
-<%@ Import Namespace="iTextSharp.text.pdf" %>
-<%@ Import Namespace="iTextSharp.text.pdf.parser" %>
+<%@ Import Namespace="org.apache.pdfbox.pdmodel" %>
+<%@ Import Namespace="org.apache.pdfbox.util" %>
 
 <script runat="server">
 
@@ -37,7 +46,7 @@
             Sitecore.Web.WebUtil.Redirect("/functions/login.aspx");
         }
     }
-    
+
     protected void GoButton_Click(object sender, EventArgs e)
     {
         try
@@ -52,19 +61,26 @@
 
             var media = new MediaItem(file);
             var mediaStream = media.GetMediaStream();
-            
+
             var text = new StringBuilder();
-            using (PdfReader reader = new PdfReader(mediaStream))
+
+
+            PDDocument doc = null;
+            try
             {
-                for (int index = 1; index <= reader.NumberOfPages; index++)
+                java.io.InputStream javaStream = new ikvm.io.InputStreamWrapper(mediaStream);
+                doc = PDDocument.load(javaStream);
+                var stripper = new PDFTextStripper();
+                var pdfContent = stripper.getText(doc);
+                Response.Write(pdfContent);
+            }
+            finally
+            {
+                if (doc != null)
                 {
-                    text.Append(PdfTextExtractor.GetTextFromPage(reader, index));
+                    doc.close();
                 }
             }
-            mediaStream.Close();
-            
-            string pdfContent = text.ToString();
-            Response.Write(pdfContent);
         }
         catch (Exception ex)
         {
