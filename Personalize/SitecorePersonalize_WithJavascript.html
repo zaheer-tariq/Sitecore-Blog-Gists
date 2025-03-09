@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sitecore Personalize</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <style>
+        table, th, td {
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+
+            table td {
+                padding: 10px;
+            }
+    </style>
+    <script>
+
+        var engage = undefined;
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://d1mj578wat5n4o.cloudfront.net/sitecore-engage-v.1.4.3.min.js";
+        var x = document.querySelector("script");
+        x.parentNode.insertBefore(s, x);
+        s.addEventListener("load", async () => {
+            var settings = {
+                clientKey: "9c2b453d24564147a5bd72eeeacc9050", // In Sitecore Personalize, on the navigation pane, click  > Company information > Client key.
+		        targetURL: "https://api-engage-us.sitecorecloud.io",
+                pointOfSale: "demo",
+                cookieDomain: "",   // On production this can be .yourdomain.com
+                cookieExpiryDays: 365,
+                forceServerCookieMode: false,
+                includeUTMParameters: true,
+                webPersonalization: true
+            };
+
+            window.Engage.init(settings).then(function (result) {
+                engage = result;
+                var event = {
+                    channel: "Web",
+                    language: "EN",   // For multi-lingual site this should be dynamic, you can have your app store it in cookie and you read it from cookies here
+                    currency: "USD",  // This should be dynamic, you can have your app store it in cookie and you read it from cookies here
+                    page: window.location.pathname
+                };
+                engage.pageView(event);
+            });
+
+        });
+
+    </script>
+
+</head>
+<body>
+    <div style="padding: 10px">
+        <img height="35" src="https://doc.sitecore.com/_next/image?url=https%3A%2F%2Fdelivery-sitecore.sitecorecontenthub.cloud%2Fapi%2Fpublic%2Fcontent%2Flogo-personalize&w=384&q=75" />
+    </div>
+    <!-- Header -->
+    <header class="w3-container w3-theme w3-padding" style="background-color: #EB001A !important" id="myHeader">
+        <div class="w3-center">
+            <h4>Personalize digital experiences</h4>
+            <h1 class="w3-xxxlarge w3-animate-bottom">Sitecore Personalize</h1>
+            <div class="w3-padding-32">
+                <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Getting Started</button>
+            </div>
+        </div>
+    </header>
+
+    <div style="padding: 10px 50px 10px 50px">
+        <h2 style="color: red"><b>Please make sure that you update these values to correct values before testing.</b></h2>
+        <h3 style="color: red"><b>Note:</b> It did not work for me opening the HTML file directly, host it in IIS and it works.<br /> Check Develoeper Tools -> Console or Network tab for errors. To Debug add ?bxQATool=true at the end of the URL</h3>
+        <p>Check more details at <a href="https://doc.sitecore.com/personalize/en/developers/api/collect-required-details.html">https://doc.sitecore.com/personalize/en/developers/api/collect-required-details.html</a></p>
+        <table>
+            <tr>
+                <td><b>clientKey</b></td>
+                <td>
+                    Go to Sitecore Personalize (https://app-personalize-us.sitecorecloud.io/#/management/company-information) -> and Copy Client key <br />
+                    It should look like: a98a250827e74d29877304d589b913e0
+                </td>
+            </tr>
+            <tr>
+                <td><b>targetURL</b></td>
+                <td>
+                    If your personalize is in US you can skip this step. <br />
+                    Must be one of these <br />
+                    <ul>
+                        <li>https://api-engage-ap.sitecorecloud.io</li>
+                        <li>https://api-engage-eu.sitecorecloud.io</li>
+                        <li>https://api-engage-jpe.sitecorecloud.io</li>
+                        <li>https://api-engage-us.sitecorecloud.io</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><b>pointOfSale</b></td>
+                <td>Name of the Point of Sale, you created in Sitecore Personalize. For example "Demo" or "Prod"</td>
+            </tr>
+        </table>
+
+
+    </div>
+
+
+    <div class="w3-row-padding w3-center w3-margin-top">
+        <div class="w3-third">
+            <div class="w3-card w3-container" style="min-height:460px">
+                <h3>Create experiments</h3><br>
+                <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+                <p>Create goal-driven A/B testing and optimization with context-aware personalization.</p>
+            </div>
+        </div>
+
+        <div class="w3-third">
+            <div class="w3-card w3-container" style="min-height:460px">
+                <h3>Personalize digital experiences</h3><br>
+                <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+                <p>Create customized offers, feedback widgets, or operational messages over any channel.</p>
+            </div>
+        </div>
+
+        <div class="w3-third">
+            <div class="w3-card w3-container" style="min-height:460px">
+                <h3>Power decisioning</h3><br>
+                <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+                <p>Create decision strategies using a flexible drag-and-drop canvas.</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>
