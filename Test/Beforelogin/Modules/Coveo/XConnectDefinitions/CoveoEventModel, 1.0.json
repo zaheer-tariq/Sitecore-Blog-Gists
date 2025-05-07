@@ -1,0 +1,209 @@
+{
+  "Name": "CoveoEventModel",
+  "Version": "1.0",
+  "References": [
+    {
+      "Name": "XConnect",
+      "Version": "1.0"
+    },
+    {
+      "Name": "Sitecore.XConnect.Collection.Model",
+      "Version": "10.3"
+    }
+  ],
+  "Types": {
+    "Coveo.Analytics.XConnect.Events.BreadcrumbClick": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.BreadcrumbClick, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.BreadcrumbReset": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.BreadcrumbReset, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.DidYouMean": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.DidYouMean, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.DocumentClick": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.DocumentClick, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.ErrorBack": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.ErrorBack, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.ErrorClearQuery": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.ErrorClearQuery, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.ErrorRetry": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.ErrorRetry, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.FacetClearAll": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.FacetClearAll, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.FacetDeselection": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.FacetDeselection, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.FacetExclusion": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.FacetExclusion, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.FacetSearch": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.FacetSearch, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.FacetSelection": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.FacetSelection, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.FacetSelectionFromOmnibox": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.FacetSelectionFromOmnibox, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.FacetSelectionFromResults": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.FacetSelectionFromResults, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.FacetSliderClick": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.FacetSliderClick, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.FacetSliderGraphClick": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.FacetSliderGraphClick, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.FacetSort": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.FacetSort, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.FacetToggle": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.FacetToggle, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.FacetUnexclusion": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.FacetUnexclusion, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.InterfaceChange": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.InterfaceChange, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.NoResultsBack": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.NoResultsBack, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.Pager": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.Pager, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.QueryError": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.QueryError, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.RecommendationClick": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.RecommendationClick, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.RecommendationQuery": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.RecommendationQuery, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.SearchQueryLink": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.SearchQueryLink, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.QuickviewClick": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.QuickviewClick, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.ResultSort": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.ResultSort, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.SearchAsYouType": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.SearchAsYouType, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.SearchboxClear": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.SearchboxClear, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.SearchQuerySubmit": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.SearchQuerySubmit, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    },
+    "Coveo.Analytics.XConnect.Events.TopFieldSuggestionClick": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Event",
+      "ClrType": "Coveo.Analytics.XConnect.Events.TopFieldSuggestionClick, Coveo.Analytics.XConnect, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    }
+  },
+  "Facets": []
+}
