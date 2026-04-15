@@ -1,0 +1,249 @@
+/* global css */
+
+* {
+  font-family: Lexend;
+  font-style: normal;
+}
+
+button {
+  border: none;
+  background: none;
+  font-size: 20px;
+}
+
+.app-header {
+  background-color: #24389e;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.column {
+  float: left;
+  margin: auto;
+  padding-bottom: 1rem;
+}
+
+/* search box component styling */
+
+.search-section {
+  width: 25%;
+  align-self: flex-start;
+  position: relative;
+  top: 30px;
+}
+
+.search-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-box input {
+  flex: none;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
+}
+
+.search-box input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px;
+}
+
+.search-results {
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  width: 100%;
+  z-index: 1;
+}
+.search-queries {
+  width: 100%;
+  border: #e2e0db 2px solid;
+  border-right: 0;
+}
+
+.search-queries p {
+  margin: 0px;
+}
+
+.search-queries p:hover {
+  background-color: #faf9f6;
+}
+
+.search-instant-results {
+  width: 100%;
+  font-size: 15px;
+  overflow: hidden;
+  border-bottom: #e2e0db 2px solid;
+  border-top: #e2e0db 2px solid;
+  border-left: #e2e0db 2px dotted;
+  border-right: #e2e0db 2px solid;
+  z-index: 1;
+}
+
+/* facet component styling */
+
+.facet-section {
+  width: 20%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.facet {
+  border: 2px solid #8dcce8;
+  padding-left: 10px;
+  border-radius: 20px;
+}
+
+.facet h3 {
+  color: #24389e;
+}
+
+.facet ul {
+  text-align: left;
+}
+
+.facet li:hover {
+  color: #1cebcf;
+}
+
+/* styling for result list component */
+
+.results-section {
+  width: 50%;
+}
+
+.result-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-button {
+  position: relative;
+  height: 40px;
+  width: 120px;
+  background-color: #00adff;
+  border: none;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 0px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.result-button:after {
+  content: "";
+  background: #00adff;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.result-button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+/* styling for pager component */
+
+.pager {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pager-arrow {
+  color: #24389e;
+}
+
+.pager-number:active,
+.pager-number:focus,
+.pager-number:disabled {
+  background-color: #8dcce8;
+  border-radius: 5px;
+  color: black;
+}
+
+.pager-number:hover,
+.pager-arrow:hover {
+  border: 2px solid #8dcce8;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* styling for sort component */
+
+.sort-select {
+  padding: 10px;
+  background: #85eee0;
+  border: none;
+  border-radius: 3px;
+}
+
+/* styling for PDP */
+
+.pdp-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product {
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid #00adff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.back-to-search {
+  padding: 10px;
+  background: #85eee0;
+  border: none;
+  border-radius: 3px;
+}
+
+.product-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* styling for recs */
+.recs-section {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.recs-list {
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid #00adff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
